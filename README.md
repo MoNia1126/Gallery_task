@@ -1,16 +1,31 @@
-# gallery_task
+# Gallery Task
 
-A new Flutter project.
+This Flutter app allows users to pick multiple images from their device's gallery and display them
+in a ListView.
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+1. Clone the repository.
+2. Run `flutter pub get`.
+3. Run the app using `flutter run`.
 
-A few resources to get you started if this is your first Flutter project:
+## Permissions
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Android:** Add the following to `AndroidManifest.xml`:
+  ```xml
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  ```
+- **iOS:** Add the following to `Info.plist`:
+  ```xml
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>This app requires access to your photo library to select images.</string>
+  ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshot
+
+## Screenshots
+
+| Output                        | Pick Image                           | No Image                         |
+|-------------------------------|--------------------------------------|----------------------------------|
+| ![Output](screens/output.jpg) | ![Pick Image](screens/pickImage.jpg) | ![No Image](screens/noImage.jpg) |
